@@ -1,0 +1,30 @@
+{
+  "run_id": "eval-binary-search_old_skill",
+  "assertions": [
+    {
+      "text": "analogy-first-line",
+      "passed": true,
+      "evidence": "Starts with '翻一本厚厚的电话本找某个人的名字' - analogy first"
+    },
+    {
+      "text": "no-tech-terms-in-intro",
+      "passed": true,
+      "evidence": "First sentence uses phone book metaphor, no programming terms"
+    },
+    {
+      "text": "dictionary-analogy",
+      "passed": true,
+      "evidence": "Uses phone book as everyday analogy"
+    },
+    {
+      "text": "consistent-analogy",
+      "passed": true,
+      "evidence": "Phone book analogy is used consistently"
+    },
+    {
+      "text": "summary-present",
+      "passed": true,
+      "evidence": "Ends with one-sentence summary about '每次把搜索范围砍掉一半'"
+    }
+  ]
+}

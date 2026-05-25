@@ -1,0 +1,25 @@
+{
+  "run_id": "eval-react-effect_old_skill",
+  "assertions": [
+    {
+      "text": "analogy-first-line",
+      "passed": true,
+      "evidence": "Starts with '电子门铃' analogy"
+    },
+    {
+      "text": "cleanup-explained",
+      "passed": true,
+      "evidence": "Explains cleanup as '出门时自动关掉门铃电源'"
+    },
+    {
+      "text": "effect-as-listener",
+      "passed": true,
+      "evidence": "Describes as '装了...感应器' (installed sensors)"
+    },
+    {
+      "text": "summary-present",
+      "passed": true,
+      "evidence": "Ends with summary about '装了两个耳朵监听网络变化'"
+    }
+  ]
+}

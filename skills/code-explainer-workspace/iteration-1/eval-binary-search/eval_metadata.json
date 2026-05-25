@@ -1,0 +1,32 @@
+{
+  "eval_id": 0,
+  "eval_name": "binary-search",
+  "prompt": "帮我解释一下这段代码在做什么，用大白话讲：\n\n```python\ndef binary_search(arr, target):\n    left, right = 0, len(arr) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n    return -1\n```",
+  "assertions": [
+    {
+      "name": "analogy-first-line",
+      "description": "The explanation starts with an everyday analogy, not technical jargon",
+      "check": "first_sentence_contains_analogy"
+    },
+    {
+      "name": "no-tech-terms-in-intro",
+      "description": "The introductory sentence avoids programming terms like 'binary search', 'algorithm', 'divide and conquer', 'logarithmic', 'pointer', 'index'",
+      "check": "intro_avoids_jargon"
+    },
+    {
+      "name": "dictionary-analogy",
+      "description": "Uses a familiar real-world analogy like dictionary lookup, guessing game, or phone book",
+      "check": "contains_everyday_analogy"
+    },
+    {
+      "name": "consistent-analogy",
+      "description": "Sticks to one consistent analogy throughout the explanation",
+      "check": "analogy_not_mixed"
+    },
+    {
+      "name": "summary-present",
+      "description": "Ends with a one-sentence summary of what the code does",
+      "check": "has_summary"
+    }
+  ]
+}

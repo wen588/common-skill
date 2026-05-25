@@ -1,0 +1,30 @@
+{
+  "run_id": "eval-binary-search_with_skill",
+  "assertions": [
+    {
+      "text": "analogy-first-line",
+      "passed": true,
+      "evidence": "Starts with 'Like looking up a word in a paper dictionary' - immediate analogy, no jargon"
+    },
+    {
+      "text": "no-tech-terms-in-intro",
+      "passed": true,
+      "evidence": "First sentence uses only everyday language (dictionary, word lookup)"
+    },
+    {
+      "text": "dictionary-analogy",
+      "passed": true,
+      "evidence": "Uses paper dictionary/phone book analogy throughout"
+    },
+    {
+      "text": "consistent-analogy",
+      "passed": true,
+      "evidence": "Dictionary/phone book search is used consistently from start to finish"
+    },
+    {
+      "text": "summary-present",
+      "passed": true,
+      "evidence": "Ends with 'This is the dictionary lookup method' summary"
+    }
+  ]
+}

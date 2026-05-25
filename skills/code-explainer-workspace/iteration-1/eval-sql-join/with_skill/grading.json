@@ -1,0 +1,30 @@
+{
+  "run_id": "eval-sql-join_with_skill",
+  "assertions": [
+    {
+      "text": "analogy-first-line",
+      "passed": true,
+      "evidence": "Starts with 'address book and a stack of receipts' analogy"
+    },
+    {
+      "text": "join-explained-with-analogy",
+      "passed": true,
+      "evidence": "INNER JOIN explained as 'laying notebooks side by side and cross-referencing'"
+    },
+    {
+      "text": "no-jargon-in-intro",
+      "passed": true,
+      "evidence": "First line uses only everyday language"
+    },
+    {
+      "text": "step-by-step",
+      "passed": true,
+      "evidence": "Walkthrough numbered 1-4, each with real-life mapping"
+    },
+    {
+      "text": "summary-present",
+      "passed": true,
+      "evidence": "Ends with 'This query is a filtered cross-reference report' summary"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "run_id": "eval-sql-join_old_skill",
+  "assertions": [
+    {
+      "text": "analogy-first-line",
+      "passed": true,
+      "evidence": "Starts with '翻看店里的大客户消费记录' analogy"
+    },
+    {
+      "text": "join-explained-with-analogy",
+      "passed": true,
+      "evidence": "JOIN explained as '拿着顾客编号，把两本册子一对'"
+    },
+    {
+      "text": "no-jargon-in-intro",
+      "passed": true,
+      "evidence": "First line uses only everyday Chinese phrasing"
+    },
+    {
+      "text": "step-by-step",
+      "passed": true,
+      "evidence": "Has numbered steps 第一步-第四步"
+    },
+    {
+      "text": "summary-present",
+      "passed": true,
+      "evidence": "Ends with '一句话总结'"
+    }
+  ]
+}

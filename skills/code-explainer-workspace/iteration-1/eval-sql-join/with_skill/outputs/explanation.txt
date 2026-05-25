@@ -1,0 +1,23 @@
+🧠 One-liner: Like grabbing your address book and a stack of receipts, finding every customer who spent more than $100, then ranking them from biggest spender to smallest.
+
+🏠 The Big Picture: Imagine you run a small shop. You have two notebooks — one lists all your customers' names and IDs, the other lists every order with the customer's ID and the amount. You want a single report: "Show me my VIP customers who spent over $100, sorted by who spent the most." So you sit down, cross-reference the two notebooks, filter out small orders, and write the results on a new clean sheet sorted biggest first.
+
+👣 Walkthrough:
+
+1. FROM users u INNER JOIN orders o ON u.id = o.user_id
+   → In real life: You lay the customer notebook and the order notebook side by side. For every customer, you find all the orders that have their ID. If a customer has no orders, they're ignored entirely.
+   → In code: The INNER JOIN links each user to their matching orders, keeping only users who actually placed orders.
+
+2. WHERE o.total > 100
+   → In real life: You flip through the matched results and toss out any order under $100 — you only care about the big purchases.
+   → In code: This filters the rows, keeping only orders with a total greater than 100.
+
+3. ORDER BY o.total DESC
+   → In real life: You reorder the remaining entries so the highest dollar amount is at the top, like a leaderboard.
+   → In code: DESC means descending — biggest number first.
+
+4. SELECT u.name, o.order_date, o.total
+   → In real life: On your final report, you only write down the customer's name, the date they ordered, and the amount. You leave out their address, phone number, payment method — all the extra stuff you don't need right now.
+   → In code: SELECT picks exactly which columns to show in the result.
+
+📝 Summary: This query is a filtered cross-reference report — it links a customer list with an order list, keeps only big purchases over $100, and ranks them from most expensive to least.

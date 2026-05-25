@@ -1,0 +1,32 @@
+{
+  "eval_id": 2,
+  "eval_name": "sql-join",
+  "prompt": "这段 SQL 查询是干嘛的？我不太懂数据库：\n\n```sql\nSELECT \n    u.name,\n    o.order_date,\n    o.total\nFROM users u\nINNER JOIN orders o ON u.id = o.user_id\nWHERE o.total > 100\nORDER BY o.total DESC;\n```",
+  "assertions": [
+    {
+      "name": "analogy-first-line",
+      "description": "The explanation starts with an everyday analogy, not technical jargon",
+      "check": "first_sentence_contains_analogy"
+    },
+    {
+      "name": "join-explained-with-analogy",
+      "description": "The JOIN operation is explained using an everyday analogy (matching, pairing, merging)",
+      "check": "join_has_analogy"
+    },
+    {
+      "name": "no-jargon-in-intro",
+      "description": "Avoids terms like 'relational database', 'normalization', 'foreign key', 'cartesian product' in the intro",
+      "check": "intro_avoids_jargon"
+    },
+    {
+      "name": "step-by-step",
+      "description": "Explains the query step by step rather than all at once",
+      "check": "has_step_by_step"
+    },
+    {
+      "name": "summary-present",
+      "description": "Ends with a one-sentence summary",
+      "check": "has_summary"
+    }
+  ]
+}

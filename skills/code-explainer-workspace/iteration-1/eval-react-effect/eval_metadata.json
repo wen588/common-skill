@@ -1,0 +1,27 @@
+{
+  "eval_id": 1,
+  "eval_name": "react-effect",
+  "prompt": "看不懂这段 React 代码，能解释一下吗？\n\n```jsx\nimport { useState, useEffect } from 'react';\n\nfunction OnlineStatus() {\n  const [isOnline, setIsOnline] = useState(true);\n\n  useEffect(() => {\n    function handleOnline() { setIsOnline(true); }\n    function handleOffline() { setIsOnline(false); }\n\n    window.addEventListener('online', handleOnline);\n    window.addEventListener('offline', handleOffline);\n\n    return () => {\n      window.removeEventListener('online', handleOnline);\n      window.removeEventListener('offline', handleOffline);\n    };\n  }, []);\n\n  return (\n    <div>\n      <h1>{isOnline ? '✅ Online' : '❌ Offline'}</h1>\n    </div>\n  );\n}\n```",
+  "assertions": [
+    {
+      "name": "analogy-first-line",
+      "description": "The explanation starts with an everyday analogy, not technical jargon",
+      "check": "first_sentence_contains_analogy"
+    },
+    {
+      "name": "cleanup-explained",
+      "description": "Explains why the cleanup function (return inside useEffect) is needed",
+      "check": "explains_cleanup"
+    },
+    {
+      "name": "effect-as-listener",
+      "description": "Describes useEffect as a listener or subscription mechanism",
+      "check": "describes_listener_pattern"
+    },
+    {
+      "name": "summary-present",
+      "description": "Ends with a one-sentence summary",
+      "check": "has_summary"
+    }
+  ]
+}

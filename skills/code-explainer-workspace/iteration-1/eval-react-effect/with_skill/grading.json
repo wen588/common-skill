@@ -1,0 +1,25 @@
+{
+  "run_id": "eval-react-effect_with_skill",
+  "assertions": [
+    {
+      "text": "analogy-first-line",
+      "passed": true,
+      "evidence": "Starts with 'doorbell that detects whether your front door is open or closed'"
+    },
+    {
+      "text": "cleanup-explained",
+      "passed": true,
+      "evidence": "Explicitly explains cleanup as 'removes the sensor when the component goes away, preventing ghost listeners'"
+    },
+    {
+      "text": "effect-as-listener",
+      "passed": true,
+      "evidence": "Describes useEffect as 'hangs a sensor on your browser window' - listener pattern throughout"
+    },
+    {
+      "text": "summary-present",
+      "passed": true,
+      "evidence": "Ends with 'This code is an automatic connection indicator' summary"
+    }
+  ]
+}

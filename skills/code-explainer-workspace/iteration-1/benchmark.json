@@ -1,0 +1,89 @@
+{
+  "skill_name": "code-explainer",
+  "num_evals": 3,
+  "configs": [
+    "with_skill",
+    "old_skill"
+  ],
+  "detailed": [
+    {
+      "eval_id": 0,
+      "eval_name": "binary-search",
+      "config": "with_skill",
+      "passed": 5,
+      "total": 5,
+      "pass_rate": 1.0,
+      "num_assertions": 5
+    },
+    {
+      "eval_id": 0,
+      "eval_name": "binary-search",
+      "config": "old_skill",
+      "passed": 5,
+      "total": 5,
+      "pass_rate": 1.0,
+      "num_assertions": 5
+    },
+    {
+      "eval_id": 1,
+      "eval_name": "react-effect",
+      "config": "with_skill",
+      "passed": 4,
+      "total": 4,
+      "pass_rate": 1.0,
+      "num_assertions": 4
+    },
+    {
+      "eval_id": 1,
+      "eval_name": "react-effect",
+      "config": "old_skill",
+      "passed": 4,
+      "total": 4,
+      "pass_rate": 1.0,
+      "num_assertions": 4
+    },
+    {
+      "eval_id": 2,
+      "eval_name": "sql-join",
+      "config": "with_skill",
+      "passed": 5,
+      "total": 5,
+      "pass_rate": 1.0,
+      "num_assertions": 5
+    },
+    {
+      "eval_id": 2,
+      "eval_name": "sql-join",
+      "config": "old_skill",
+      "passed": 5,
+      "total": 5,
+      "pass_rate": 1.0,
+      "num_assertions": 5
+    }
+  ],
+  "aggregate": {
+    "with_skill": {
+      "pass_rate": 1.0,
+      "passed": 14,
+      "total": 14,
+      "num_evals": 3
+    },
+    "old_skill": {
+      "pass_rate": 1.0,
+      "passed": 14,
+      "total": 14,
+      "num_evals": 3
+    }
+  },
+  "qualitative": {
+    "summary": "Both old and new skill pass all basic assertions. The new skill shows structural and qualitative improvements.",
+    "key_differences": [
+      "New skill enforces a consistent 5-layer output format",
+      "New skill provides code-type-specific analogy strategies (6 patterns)",
+      "New skill includes explicit anti-patterns list",
+      "New skill has a quality self-check mechanism",
+      "New skill supports interactive follow-up capability",
+      "New skill description is more precise for better triggering"
+    ]
+  }
+}
