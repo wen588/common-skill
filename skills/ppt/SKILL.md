@@ -1,6 +1,6 @@
 ---
 name: ppt
-description: 全能PPT助手——集成7角色内容创作、JSON→PPTX构建、编辑/审查/QA三大能力。覆盖从主题生成到最终.pptx文件输出的完整流水线，合并原ppt-generator、pptx-generator、pptx三个技能。
+description: 全能PPT助手——集成7角色内容创作、JSON→PPTX构建、编辑/审查/QA三大能力。覆盖从主题生成到最终.pptx文件输出的完整流水线，合并原ppt-generator、pptx-generator、pptx三个技能。同时整合 guizang-ppt-skill 的网页 PPT（单 HTML 文件，横向翻页，WebGL 背景）能力。
 dependency:
   python:
     - python-pptx>=1.0.2
@@ -25,6 +25,7 @@ dependency:
 | **build** | 已有内容/JSON，生成文件 | "把这份数据生成PPTX"、"转成PPT文件" |
 | **edit** | 修改现有 PPTX 文件 | "帮我改一下这个PPT"、"替换第3页的内容" |
 | **review** | 读取/分析/审查 PPTX | "看看这个PPT讲了什么"、"检查有没有问题" |
+| **web** | 生成网页 PPT（单 HTML 横向翻页） | "做个网页PPT"、"杂志风HTML"、"瑞士风格网页演示" |
 
 ---
 
@@ -210,11 +211,45 @@ python -m markitdown output.pptx | grep -iE "xxxx|lorem|ipsum|this.*(page|slide)
 | 添加幻灯片 | [`../pptx/scripts/add_slide.py`](../pptx/scripts/add_slide.py) |
 | 清理工具 | [`../pptx/scripts/clean.py`](../pptx/scripts/clean.py) |
 
+### 7. web — 网页 PPT（整合 guizang-ppt-skill）
+
+生成**单文件 HTML**横向翻页网页 PPT，无需 Powerpoint 即可在浏览器打开。
+
+#### 风格 A · 电子杂志风
+- 衬线标题（Noto Serif SC + Playfair Display）
+- WebGL 流体/等高线背景
+- 适合：人文分享、行业观察、商业发布
+
+#### 风格 B · 瑞士国际主义
+- 全程无衬线（Inter + Helvetica + Noto Sans SC）
+- WebGL 极细网格 + 点阵背景
+- 极致字号对比、高反差功能色
+- 适合：科技产品、数据汇报、设计领域
+
+#### 使用方式
+1. 确定风格 A 或 B 以及主题色
+2. 拷贝 `guizang-ppt-skill/assets/template.html`（风格 A）或 `template-swiss.html`（风格 B）
+3. 从 `guizang-ppt-skill/references/layouts.md` 或 `layouts-swiss.md` 挑选布局
+4. 填充内容，图片放入 `images/` 目录
+5. 打开 HTML 文件即可预览
+
+#### 资源索引
+| 资源 | 路径 |
+|---|---|
+| 模板（电子杂志风） | [`guizang-ppt-skill/assets/template.html`](../guizang-ppt-skill/assets/template.html) |
+| 模板（瑞士风） | [`guizang-ppt-skill/assets/template-swiss.html`](../guizang-ppt-skill/assets/template-swiss.html) |
+| 布局（电子杂志风） | [`guizang-ppt-skill/references/layouts.md`](../guizang-ppt-skill/references/layouts.md) |
+| 布局（瑞士风） | [`guizang-ppt-skill/references/layouts-swiss.md`](../guizang-ppt-skill/references/layouts-swiss.md) |
+| 主题色（电子杂志风） | [`guizang-ppt-skill/references/themes.md`](../guizang-ppt-skill/references/themes.md) |
+| 主题色（瑞士风） | [`guizang-ppt-skill/references/themes-swiss.md`](../guizang-ppt-skill/references/themes-swiss.md) |
+| 质量检查清单 | [`guizang-ppt-skill/references/checklist.md`](../guizang-ppt-skill/references/checklist.md) |
+
 ---
 
 ## 注意事项
-- 内容创作由 LLM 完成，仅在最终生成 .pptx 时调用脚本
+- 内容创作由 LLM 完成，仅在最终生成 .pptx / .html 时调用脚本
 - 三个源技能保留不动，本技能通过路径引用，不复制文件
 - JSON 构建阶段支持图表类型：柱状图、折线图、饼图
 - 支持图片格式：PNG、JPG、JPEG、GIF
 - 生成的 .pptx 文件兼容 PowerPoint、WPS
+- **网页 PPT**：如需杂志风或瑞士风 HTML 演示，系统自动路由到 `guizang-ppt-skill`
