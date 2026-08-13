@@ -1,6 +1,6 @@
 ---
 name: ppt
-description: 全能PPT助手——集成7角色内容创作、JSON→PPTX构建、编辑/审查/QA三大能力。覆盖从主题生成到最终.pptx文件输出的完整流水线，合并原ppt-generator、pptx-generator、pptx三个技能。同时整合 guizang-ppt-skill 的网页 PPT（单 HTML 文件，横向翻页，WebGL 背景）能力。
+description: 全能PPT助手，覆盖主题生成、内容创作、JSON 转 PPTX、编辑、审查和 QA。适合做学术汇报、产品演示、网页 PPT，整合原 ppt-generator、pptx-generator、pptx 和 guizang-ppt-skill 的能力。
 dependency:
   python:
     - python-pptx>=1.0.2

@@ -1,6 +1,6 @@
 ---
 name: code-release-assistant
-description: 代码发布助手——生成 README、复现说明、依赖环境打包、Dockerfile、开源许可证选择、清理敏感信息。适用于论文被接收后准备代码开源，或毕业前整理代码仓库。
+description: 代码发布助手，负责生成 README、复现说明、依赖环境说明、Dockerfile、许可证建议，并清理敏感信息。适合论文接收后开源代码、毕业前整理仓库。
 ---
 
 # 代码发布助手

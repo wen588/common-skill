@@ -1,6 +1,6 @@
 ---
 name: obsidian-skills-integrated
-description: Obsidian 知识管理官方技能集——提供 Agent 操作 Obsidian 的能力。包含 json-canvas（Canvas 思维导图编辑）、obsidian-bases（数据库视图创建）、obsidian-markdown（标记语法）、obsidian-cli（CLI 操作）、defuddle（网页内容提取）。适用于处理 .canvas/.base/.md 文件、创建思维导图/流程图/数据库视图/CLI操作/网页内容清理。
+description: Obsidian 知识管理技能集，提供 Canvas、Bases、Markdown、CLI 和网页内容提取能力。适合处理 .canvas/.base/.md 文件、创建思维导图、数据库视图、CLI 操作和网页内容清理。
 ---
 
 # Obsidian Skills - 官方知识管理技能集
